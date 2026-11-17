@@ -6,3 +6,50 @@ frontend/dist/
 __pycache__/
 backend/.env
 backend/app.db
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Python environments
+venv/
+.venv/
+
+# Node dependencies and builds
+node_modules/
+dist/
+
+# Generated storage and uploaded data
+backend/storage/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+!.env.example
+# Database
+*.db
+*.sqlite
+*.sqlite3
+# Dependencies
+venv/
+.venv/
+node_modules/
+dist/
+# Generated data
+backend/storage/
+# Python cache
+__pycache__/
+*.pyc
+
+# TypeScript build cache
+*.tsbuildinfo
