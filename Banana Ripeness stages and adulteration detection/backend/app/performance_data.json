@@ -1,0 +1,411 @@
+{
+ "ripeness": {
+  "model": "BananaMultimodalNet (EfficientNet-B0 x2 + Matrix MLP, 5-class)",
+  "inputs": [
+   "RGB image",
+   "Thermal image",
+   "Thermal matrix XLSX"
+  ],
+  "test_samples": 469,
+  "best_epoch": 8,
+  "test": {
+   "loss": 0.5037,
+   "accuracy": 88.7,
+   "macro_precision": 0.8418,
+   "macro_recall": 0.859,
+   "macro_f1": 0.8403,
+   "weighted_f1": 0.8888
+  },
+  "per_class": [
+   {
+    "stage": "Stage_1_Mature_Green",
+    "precision": 0.4783,
+    "recall": 0.7333,
+    "f1": 0.5789,
+    "support": 30
+   },
+   {
+    "stage": "Stage_2_Green_Yellow_Transition",
+    "precision": 0.9365,
+    "recall": 0.6705,
+    "f1": 0.7815,
+    "support": 88
+   },
+   {
+    "stage": "Stage_3_Early_Ripening",
+    "precision": 0.9255,
+    "recall": 0.949,
+    "f1": 0.9371,
+    "support": 157
+   },
+   {
+    "stage": "Stage_4_Fully_Yellow",
+    "precision": 0.9353,
+    "recall": 0.942,
+    "f1": 0.9386,
+    "support": 138
+   },
+   {
+    "stage": "Stage_5_Yellow_Spotted",
+    "precision": 0.9333,
+    "recall": 1.0,
+    "f1": 0.9655,
+    "support": 56
+   }
+  ],
+  "confusion_matrix": {
+   "labels": [
+    "Stage_1",
+    "Stage_2",
+    "Stage_3",
+    "Stage_4",
+    "Stage_5"
+   ],
+   "matrix": [
+    [
+     22,
+     0,
+     8,
+     0,
+     0
+    ],
+    [
+     22,
+     59,
+     3,
+     3,
+     1
+    ],
+    [
+     2,
+     0,
+     149,
+     6,
+     0
+    ],
+    [
+     0,
+     4,
+     1,
+     130,
+     3
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     56
+    ]
+   ]
+  },
+  "curve": [
+   {
+    "epoch": 1,
+    "train_loss": 0.8004,
+    "train_acc": 75.45,
+    "val_loss": 0.4535,
+    "val_acc": 91.37,
+    "val_f1": 0.9118
+   },
+   {
+    "epoch": 2,
+    "train_loss": 0.6077,
+    "train_acc": 85.5,
+    "val_loss": 0.4677,
+    "val_acc": 90.04,
+    "val_f1": 0.8945
+   },
+   {
+    "epoch": 3,
+    "train_loss": 0.5552,
+    "train_acc": 86.8,
+    "val_loss": 0.4813,
+    "val_acc": 87.61,
+    "val_f1": 0.8669
+   },
+   {
+    "epoch": 4,
+    "train_loss": 0.5199,
+    "train_acc": 89.49,
+    "val_loss": 0.4494,
+    "val_acc": 90.49,
+    "val_f1": 0.9002
+   },
+   {
+    "epoch": 5,
+    "train_loss": 0.4784,
+    "train_acc": 91.12,
+    "val_loss": 0.5518,
+    "val_acc": 91.59,
+    "val_f1": 0.9031
+   },
+   {
+    "epoch": 6,
+    "train_loss": 0.4324,
+    "train_acc": 93.03,
+    "val_loss": 0.426,
+    "val_acc": 91.37,
+    "val_f1": 0.9046
+   },
+   {
+    "epoch": 7,
+    "train_loss": 0.4169,
+    "train_acc": 93.21,
+    "val_loss": 0.4543,
+    "val_acc": 91.15,
+    "val_f1": 0.9001
+   },
+   {
+    "epoch": 8,
+    "train_loss": 0.426,
+    "train_acc": 93.4,
+    "val_loss": 0.4348,
+    "val_acc": 93.14,
+    "val_f1": 0.9232
+   },
+   {
+    "epoch": 9,
+    "train_loss": 0.3848,
+    "train_acc": 94.98,
+    "val_loss": 0.4358,
+    "val_acc": 92.04,
+    "val_f1": 0.9106
+   },
+   {
+    "epoch": 10,
+    "train_loss": 0.396,
+    "train_acc": 94.7,
+    "val_loss": 0.4505,
+    "val_acc": 92.04,
+    "val_f1": 0.911
+   },
+   {
+    "epoch": 11,
+    "train_loss": 0.3934,
+    "train_acc": 94.42,
+    "val_loss": 0.8528,
+    "val_acc": 91.59,
+    "val_f1": 0.9051
+   },
+   {
+    "epoch": 12,
+    "train_loss": 0.3645,
+    "train_acc": 95.35,
+    "val_loss": 0.4522,
+    "val_acc": 91.81,
+    "val_f1": 0.9082
+   },
+   {
+    "epoch": 13,
+    "train_loss": 0.3586,
+    "train_acc": 95.4,
+    "val_loss": 0.4484,
+    "val_acc": 91.59,
+    "val_f1": 0.9088
+   },
+   {
+    "epoch": 14,
+    "train_loss": 0.3798,
+    "train_acc": 95.21,
+    "val_loss": 0.4693,
+    "val_acc": 90.93,
+    "val_f1": 0.9024
+   },
+   {
+    "epoch": 15,
+    "train_loss": 0.3525,
+    "train_acc": 96.14,
+    "val_loss": 0.4594,
+    "val_acc": 91.59,
+    "val_f1": 0.9079
+   }
+  ],
+  "images": {
+   "confusion_matrix": "/images/performance/ripeness_cm.png",
+   "curves": "/images/performance/ripeness_curves.png"
+  }
+ },
+ "adulteration": {
+  "model": "BananaAdulterationNet (EfficientNet-B0, frozen backbone, 2-class)",
+  "inputs": [
+   "RGB image"
+  ],
+  "classes": {
+   "0": "Adulterated",
+   "1": "Natural"
+  },
+  "test_samples": 450,
+  "best_epoch": 14,
+  "test": {
+   "loss": 0.3087,
+   "accuracy": 89.11,
+   "macro_precision": 0.8913,
+   "macro_recall": 0.8911,
+   "macro_f1": 0.8911,
+   "weighted_f1": 0.8911,
+   "roc_auc": 0.9533,
+   "pr_auc": 0.9549,
+   "sensitivity": 0.9022,
+   "specificity": 0.88
+  },
+  "per_class": [
+   {
+    "stage": "Adulterated",
+    "precision": 0.8826,
+    "recall": 0.9022,
+    "f1": 0.8923,
+    "support": 225
+   },
+   {
+    "stage": "Natural",
+    "precision": 0.9,
+    "recall": 0.88,
+    "f1": 0.8899,
+    "support": 225
+   }
+  ],
+  "confusion_matrix": {
+   "labels": [
+    "Adulterated",
+    "Natural"
+   ],
+   "matrix": [
+    [
+     203,
+     22
+    ],
+    [
+     27,
+     198
+    ]
+   ]
+  },
+  "curve": [
+   {
+    "epoch": 1,
+    "train_loss": 0.5971,
+    "train_acc": 71.33,
+    "val_loss": 0.5303,
+    "val_acc": 81.78,
+    "val_f1": 0.8173
+   },
+   {
+    "epoch": 2,
+    "train_loss": 0.4689,
+    "train_acc": 81.29,
+    "val_loss": 0.4607,
+    "val_acc": 83.33,
+    "val_f1": 0.8325
+   },
+   {
+    "epoch": 3,
+    "train_loss": 0.4181,
+    "train_acc": 83.29,
+    "val_loss": 0.4154,
+    "val_acc": 85.56,
+    "val_f1": 0.8555
+   },
+   {
+    "epoch": 4,
+    "train_loss": 0.3808,
+    "train_acc": 84.76,
+    "val_loss": 0.3882,
+    "val_acc": 86.89,
+    "val_f1": 0.8688
+   },
+   {
+    "epoch": 5,
+    "train_loss": 0.347,
+    "train_acc": 85.38,
+    "val_loss": 0.3799,
+    "val_acc": 87.11,
+    "val_f1": 0.8705
+   },
+   {
+    "epoch": 6,
+    "train_loss": 0.3411,
+    "train_acc": 86.14,
+    "val_loss": 0.355,
+    "val_acc": 87.11,
+    "val_f1": 0.8707
+   },
+   {
+    "epoch": 7,
+    "train_loss": 0.3275,
+    "train_acc": 86.86,
+    "val_loss": 0.3427,
+    "val_acc": 88.44,
+    "val_f1": 0.8839
+   },
+   {
+    "epoch": 8,
+    "train_loss": 0.3047,
+    "train_acc": 87.33,
+    "val_loss": 0.3214,
+    "val_acc": 89.33,
+    "val_f1": 0.8932
+   },
+   {
+    "epoch": 9,
+    "train_loss": 0.3099,
+    "train_acc": 87.71,
+    "val_loss": 0.307,
+    "val_acc": 89.78,
+    "val_f1": 0.8978
+   },
+   {
+    "epoch": 10,
+    "train_loss": 0.3086,
+    "train_acc": 87.81,
+    "val_loss": 0.2976,
+    "val_acc": 90.0,
+    "val_f1": 0.9
+   },
+   {
+    "epoch": 11,
+    "train_loss": 0.2959,
+    "train_acc": 88.48,
+    "val_loss": 0.3015,
+    "val_acc": 89.56,
+    "val_f1": 0.8953
+   },
+   {
+    "epoch": 12,
+    "train_loss": 0.2956,
+    "train_acc": 87.19,
+    "val_loss": 0.2871,
+    "val_acc": 90.44,
+    "val_f1": 0.9044
+   },
+   {
+    "epoch": 13,
+    "train_loss": 0.2848,
+    "train_acc": 88.43,
+    "val_loss": 0.2767,
+    "val_acc": 90.44,
+    "val_f1": 0.9044
+   },
+   {
+    "epoch": 14,
+    "train_loss": 0.2845,
+    "train_acc": 88.62,
+    "val_loss": 0.2774,
+    "val_acc": 91.78,
+    "val_f1": 0.9177
+   },
+   {
+    "epoch": 15,
+    "train_loss": 0.2838,
+    "train_acc": 87.9,
+    "val_loss": 0.2756,
+    "val_acc": 90.89,
+    "val_f1": 0.9088
+   }
+  ],
+  "images": {
+   "confusion_matrix": "/images/performance/adulteration_cm.png",
+   "curves": "/images/performance/adulteration_curves.png"
+  }
+ }
+}
